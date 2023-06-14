@@ -1,0 +1,235 @@
+*{
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+.hdr{
+    background: white;
+    color: white;
+    top: 0%;
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    /* z-index: 99; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.7;
+}
+
+.hdrDarlk{
+    background: grey;
+}
+
+.hdrDarlk a{
+    color: white;
+}
+
+
+.nav{
+    display: flex;
+    align-items: center;
+    
+}
+
+.hdr a {
+
+    padding: 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+
+/* @media (max-width:700px) {
+    .hdr a{
+        font-size: 20px;
+    }
+}  */
+
+
+.hdr a:hover{
+    
+    color: black;
+	font-weight: bold;
+}
+.nav a:hover {
+    color: black;
+	font-weight: bold;
+}
+
+
+
+
+
+
+.my_container{
+    /* top: 10vh; */
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    width: 100%;
+    height: 60%;
+    background-color:rgb(223, 219, 213);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+}
+
+.my_containerDark{
+    background-color: rgb(80, 78, 75);
+}
+
+
+
+.my_container_skills{
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    width: 100%;
+    height: 60%;
+    background-color:white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    padding: 2%;
+}
+
+.my_container_skills_dark{
+    background-color: rgb(80, 78, 75);
+}
+
+
+/* .about_me{
+    width: 800px;
+} */
+
+
+
+.circle{
+    width: 200px;
+    height: 200px;
+    background: #888;
+    border-radius: 100px;
+    overflow: hidden;
+    justify-content: space-around;
+    
+}
+
+.my_image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+
+.name{
+    /* position: absolute;
+    text-align: center;
+    top: 60%;
+    right:  20%; */
+    color: black;
+    font-size: 20px;
+    line-height: 1.5 ;
+    
+}
+
+.nameDark{
+    color: grey;
+}
+
+.barreira{
+    width: 800px;
+}
+
+#barreira_about_me{
+    display: flex;
+}
+
+
+
+
+
+
+
+.about_me_container{
+    position: absolute;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    width: 100%;
+    height: 60%;
+    background-color:white;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    padding: 4%;
+}
+
+
+.about_me_container_dark{
+    background-color: grey;
+
+}
+
+
+.about_me{
+    line-height: 2;
+    font-size: 20px;
+}
+
+
+
+#contact{
+    position: relative;
+    /* top: px; */
+}
+
+@media (max-width:780px) {
+    .hdr a{
+        font-size: 15px;
+    }
+    .name{
+        font-size: 10px;
+    }
+    .about_me{
+        font-size: 15px;
+    }
+
+    .about_me_container{
+       display: flex;
+       align-items: center;
+       text-align: center;
+       justify-content: center;
+    }
+    
+    #barreira_about_me{
+        display: block;
+    }
+
+    .my_container_skills{
+        font-size: 10px;
+    }
+
+
+
+    
+}
+
+

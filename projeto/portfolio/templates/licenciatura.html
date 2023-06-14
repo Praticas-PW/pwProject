@@ -1,0 +1,205 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/licenciatura.css' %}"> 
+<script src="{% static 'js/licenciatura.js' %}"></script>
+{% endblock head %}
+
+
+
+{% block main %}
+
+<div class="Uni">
+    <!-- <div class="image_code" >
+        <img src="images/background.png" alt="" width="100%">
+    </div> -->
+    <div class="barreira" style="position: relative;">
+        <div class="name">
+            <h1>
+                <p>Univercidade Lusofona</p>
+                <p>Engenheria Informatica</p>
+            </h1>
+        </div>
+        
+    </div>
+</div>
+
+<div class="disciplinas">
+
+    <div class="about_me">
+        <button class="button" id="left" onclick="behind()"> < </button>
+    </div>              
+    <div class="about_me" id="firstYear">
+        <h3>
+            1 Ano
+        </h3>
+        <p>
+            Fundamentos da Fisica - 6 ects
+        </p>
+        <p>
+            Fundamentos da Programacao - 6 ects
+        </p>
+        <p>
+            Matematica Discreta - 6ects
+        </p>
+        <p>
+            Matematica - 6 etcs
+        </p>
+        <p>
+            Sistemas Digitais - 6ects
+        </p>
+        <p>
+            Fundamentos da Fisica - 6 ects
+        </p>
+        <p>
+            Algebra Linear - 5 ects
+        </p>
+        <p>
+            Algoritmia e Estrutura de Dados - 6ects
+        </p>
+        <p>
+           Arquitetura de Computadores - 5 etcs
+        </p>
+        <p>
+            Linguagens de Programnacao - 5ects
+        </p>
+        <p>
+            Matematica 2 - 5ects
+        </p> 
+    </div>
+    <div class="about_me" id="secondYear">
+        <h3>
+            2 Ano
+        </h3>
+        <p>
+           Arquiteturas Avançadas de Computadores - 6 ects
+        </p>
+        <p>
+            Base de Dados - 6 ects
+        </p>
+        <p>
+           
+            Linguagens de Programação  - 6ects
+        </p>
+        <p>
+            Sinais e Sistemas  - 6 etcs
+        </p>
+        <p>
+            
+            Sistemas Operativos - 6ects
+        </p>
+        <p>
+            Engenharia de Requisitos e Testes - 6 ects
+        </p>
+        <p>
+            Computacao Grafica  - 6 ects
+        </p>
+        <p>
+            Programação Web - 6ects
+        </p>
+        <p>
+            Redes de Computadores - 6 etcs
+        </p>
+        <p>
+            Linguagens de Programnacao 2 - 5 ects
+        </p>
+        <p>
+            Sistemas de Suporte à Decisão - 6 ects
+        </p> 
+    </div>
+
+    <div class="about_me" id="thirdYear">
+        <h3>
+            3 Ano
+        </h3>
+        <h4>
+            [Anual] Trabalho Final de Curso - 20 ects
+        </h4>
+        <p>
+            Computação Distribuída - 5 ects
+        </p>
+        <p>
+            Data Science - 5 ects
+        </p>
+        <p>
+            Engenharia de Software - 5 ects
+        </p>
+        <p>
+            Interação Humano-Máquina - 5 ects
+        </p>
+        <p>
+            Computação Móvel - 5 ects
+        </p>
+        <p>
+            Inteligência Artificial - 5 ects
+        </p>
+        <p>
+            Segurança Informática - 5 ects
+        </p>
+        <p>
+            Sistemas de Informação na Nuvem - 5 ects
+        </p>
+    </div>
+
+    <div class="about_me" id="contact">
+        <button class="button" id="right" onclick="next()"> > </button>
+    </div>
+
+</div>
+
+
+
+
+<!-- <div class="my_container_licenciatura" id="Mastery_of_Languages">            
+    <div class="child1">
+        <h1 >
+            Engenheria Informatica - Universidade Lusofona
+        </h1>
+        <br>
+        <h2>
+            1 Ano   
+        </h2>
+        <br>    
+        <h3>
+            1 semestre
+        </h3>
+        <br>
+        <p>
+            Fundamentos da Fisica - 6 ects
+        </p>
+        <br>
+        <p>
+           Fundamentos da Programacao - 6 ects
+        </p>
+        <br>
+        <p>
+           Matematica Discreta - 6ects
+        </p>
+        <br>
+        <p>
+           Matematica - 6 etcs
+        </p>
+        <br>
+        <p>
+           Sistemas Digitais - 6ects
+        </p>
+
+    </div>
+
+    <div class="child2">
+        <div class="buttons">
+            <button class="button"> < </button>
+        </div>
+    </div>
+
+    <div class="child3">
+        <div class="buttons">
+            <button class="button"> > </button>
+        </div>
+    </div>
+
+</div> -->
+
+
+{% endblock main %} 

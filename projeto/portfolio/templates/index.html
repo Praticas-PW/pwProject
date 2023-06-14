@@ -1,0 +1,75 @@
+
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block head %}
+<script src="{% static 'js/licenciatura.js' %}"></script>
+{% endblock head %}
+
+
+
+{% block main %}
+    <div class="my_container">
+        <!-- <div class="image_code" >
+            <img src="images/background.png" alt="" width="100%">
+        </div> -->
+        <div class="barreira" style="position: relative;">
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <div class="circle">
+
+                    <img src="{% static 'images/eu.png' %}" alt="" class="my_image"> 
+                </div>
+            </div>
+            <div class="name">
+                <h1>
+                    <p>Pedro Lopes</p>
+                    <p>Software Engenier</p>
+                </h1>
+            </div>
+            <div class="name">
+                Software Engenier Student 
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="about_me_container">
+        <div class="barreira" id="barreira_about_me">                
+            <div class="about_me" id="Text">
+                <h1>
+                    About me
+                </h1>
+                <p>
+                    Hello, my name is Pedro Lopes and I'm on my way to be a software engineer. I study on Universidade Lusofona in Lisbon, Portugal. 
+                </p>
+                <p>
+                    I am 20 years old  and i live in Portugal, Lisbon.
+                </p>
+                <p>
+                    This is my website, i hope you like it as much I enjoyed making it!
+                </p>
+
+                    
+            </div>
+            <div class="about_me" id="contact">
+                <h1>
+                    Contact
+                </h1>
+                <nav class="network" style="align-items: center; text-align: center;">
+                    <a href="https://www.instagram.com/p.lopes._/"><i class="fa-brands fa-instagram" style="color: black;"></i></a>
+                    <a href="https://www.linkedin.com/in/pedro-lopes-b7a906233/"><i class="fa-brands fa-linkedin"style="color: black;"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100010430552614"><i class="fa-brands fa-facebook"style="color: black;"></i></a>                
+                    <a href="https://github.com/pedroLopes-a22104722"><i class="fa-brands fa-github"style="color: black;"></i></a>
+                    <a href=""><i class="fa-solid fa-envelope"style="color: black;"></i></a>
+
+                    
+                </nav>
+                
+                <!-- https://clay-atlas.com/us/blog/2021/06/30/html-en-copy-text-button/#:~:text=You%20only%20need%20to%20set%20the%20ID%20of,var%20str%20%3D%20document.getElementById%28id%29%3B%20window.getSelection%28%29.selectAllChildren%28str%29%3B%20document.execCommand%28%22Copy%22%29%20%7D%20%3C%2Fscript%3E -->
+
+            </div>
+        </div>
+
+    </div>
+{% endblock main %} 
+
