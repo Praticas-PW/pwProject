@@ -91,3 +91,12 @@ def create_user_view(request):
 
     User.objects.create_user(name, email, password)
     return render(request, 'index.html')
+
+
+
+
+
+
+
+def video(request):
+    return render(request, 'video.html')

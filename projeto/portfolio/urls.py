@@ -16,5 +16,5 @@ urlpatterns = [
     path('create_user', views.create_user_view, name='create_user'),
     path('logout', views.logout_view, name='logout'),
     path('blog/likePost/<int:post_id>', views.likePost, name ='likePost'),
-    
+    path('video', views.video, name = 'video')
 ]
