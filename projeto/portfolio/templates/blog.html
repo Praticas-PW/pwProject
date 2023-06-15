@@ -4,11 +4,157 @@
 
 
 {% block head %}
-<link rel="stylesheet" href="{% static 'css/projetos.css' %}"> 
+<link rel="stylesheet" href="{% static 'css/blog.css' %}"> 
 <!-- <script src="{% static 'js/licenciatura.js' %}"></script> -->
 {% endblock head %}
 
 
 {% block main %}
+<div class="blogHeader">
+    <h1>
+        Blog
+    </h1>
+</div>
 
+
+
+<div class="inputText">
+    <div>
+        <h2>
+            Faz um Post!
+        </h2>
+        <form method="POST", action="">
+            {% csrf_token %}
+            <div>
+                <p>
+                    Titulo : {{ form.title }} 
+                </p>
+            </div>
+            <br>
+            <div>
+                <p>
+                    Assunto : {{ form.subject }} 
+                </p>
+            </div>
+            <br>
+            <div>
+                <p>
+                    Texto : <div class="texForm" >{{ form.text }}</div> 
+                </p>
+            </div>
+            <br>
+            <input class="hover-animation" type="submit" value="send">
+            <br>
+        </form>
+    </div>
+</div>
+
+
+<div class="input-text">
+    <div>
+        <h1 style="text-align: center;">
+            Posts
+        </h1>
+    <div>
+</div>
+
+<div class="inputText">
+    <div class="barreira">
+        <h2>
+            Geral
+        </h2>
+        {% for post in posts %}
+        <br>
+        {%if post.subject == 0%}
+        <h3>
+        <p>{{post.title}}</p>
+        </h3>
+        <br>
+        <br>
+        <p>{{post.text}}</p>
+        <a href="{% url 'deletePost' post.id %}" role="button" class="btn btn-danger">Apagar</a>
+        <br>
+        <br>
+        <br>
+        <i class="fa-solid fa-heart"></i>
+        {%endif%}
+        {% endfor %}
+    </div>
+</div>
+
+
+<div class="inputText">
+    <div class="barreira">
+        <br>
+        <h2>
+            Educacao
+        </h2>
+        {% for post in posts %}
+        <br>
+        {%if post.subject == 1%}
+        <h3>
+        <p>{{post.title}}</p>
+        </h3>
+        <br>
+        <br>
+        <p>{{post.text}}</p>
+        <a href="{% url 'deletePost' post.id %}" role="button" class="btn btn-danger">Apagar</a>
+        <br>
+        <br>
+        <br>
+        {%endif%}
+        {% endfor %}
+    </div>
+</div>
+
+
+<div class="inputText">
+    <div class="barreira">
+        <h2>
+            Tecnologia
+        </h2>
+        {% for post in posts %}
+        <br>
+        {%if post.subject == 2 %}
+        <h3>
+        <p>{{post.title}}</p>
+        </h3>
+        <br>
+        <br>
+        <p>{{post.text}}</p>
+        <a href="{% url 'deletePost' post.id %}" role="button" class="btn btn-danger">Apagar</a>
+        <br>
+        <br>
+        <br>
+        {%endif%}
+        {% endfor %}
+    </div>
+</div>
+
+
+
+<div class="inputText">
+    <div class="barreira">
+
+        <h2>
+            Cultra
+        </h2>
+        {% for post in posts %}
+        <br>
+        {%if post.subject == 3 %}
+        <h3>
+        <p>{{post.title}}</p>
+        </h3>
+        <br>
+        <br>
+        <p>{{post.text}}</p>
+        <a href="{% url 'deletePost' post.id %}" role="button" class="btn btn-danger">Apagar</a>
+        <br>
+        <br>
+        <br>
+        
+        {%endif%}
+        {% endfor %}
+    </div>
+</div>
 {% endblock main%}

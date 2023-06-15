@@ -1,0 +1,19 @@
+.centered-div {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Optional - centers the content inside the div */
+  }
+
+
+  .hover-animation {
+    background-color: white;
+    color: black;
+    transition: background-color 0.6s;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+  }
+  
+  .hover-animation:hover {
+    background-color: grey;
+  }

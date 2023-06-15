@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}"> 
+<!-- <script src="{% static 'js/licenciatura.js' %}"></script> -->
+{% endblock head %}
+
+{% block main %}
+  
+
+
+
+<div class="centered-div">
+
+    <h3>Login</h3>
+    
+    {% if not request.user.is_authenticated %}
+      {{ message }}
+    {% endif %}
+    
+    <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="username" style="border-radius: 5px;">
+        <input type="password" name="password" placeholder="password" style="border-radius: 5px;">
+        <input type="submit" value="Login" style="border-radius: 5px;" class="hover-animation">
+    </form>
+
+</div>
+
+
+{% endblock main %}

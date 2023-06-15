@@ -1,0 +1,86 @@
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+.inputText{
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    width: 100%;
+    height: 60%;
+    background-color:white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    padding: 2%;
+
+}
+
+
+
+.blogHeader{
+    /* top: 10vh; */
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    width: 100%;
+    height: 60%;
+    background-color:rgb(223, 219, 213);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+}
+
+
+.barreira{
+    width: 800px;
+}
+
+
+
+#id_text {
+    width: 700px;
+    height: 500px;
+
+      
+      
+}
+input#id_text{
+    vertical-align: top;
+    white-space: normal;
+}
+
+.hover-animation {
+    background-color: white;
+    color: black;
+    transition: background-color 0.6s;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+  }
+  
+  .hover-animation:hover {
+    background-color: grey;
+  }
+
+
+
+  .inputText > div{
+    outline: 2px solid black;
+    
+  }

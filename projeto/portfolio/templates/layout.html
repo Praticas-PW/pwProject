@@ -32,15 +32,22 @@
         
         <div class="hdr" style="position: relative;">
             <p style="display: block">
+                <a href="{% url 'login' %}">
+                    <i class="fa-sharp fa-regular fa-arrow-right-to-arc"></i>
+                    login
+                </a>
                 <a href="{% url 'home' %}">
                     Pedro Lopes
                 </a>
             </p>
             <nav class="nav">
                 <!-- <a href="#about_me">About me</a> -->
-                <a href="{% url 'about_me' %}">About</a>
-                <a href="{% url 'licenciatura' %}">Licenciatura</a>
-                <a href="{% url 'projetos' %}">Projetos</a>
+                <a href="{% url 'blog' %}">Blog</a>
+                <a href="{% url 'about_me' %}">More About Me</a>
+                <a href="{% url 'web' %}">Web</a>
+                {% block header %}
+		        {% endblock header%}
+
                 <a>
                     <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
                 </a>

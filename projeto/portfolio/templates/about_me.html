@@ -3,6 +3,12 @@
 
 {% extends 'layout.html' %}
 {% load static %}
+
+
+{% block header %}
+<a href="{% url 'licenciatura' %}">Licenciatura</a>
+<a href="{% url 'projetos' %}">Projetos</a>
+{% endblock header%}
     
 {% block main %}
     
