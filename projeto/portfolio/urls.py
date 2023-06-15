@@ -13,6 +13,8 @@ urlpatterns = [
     path('blog/deletePost/ <int:post_id>', views.deletePost,name='deletePost'),
     path('login', views.login_view, name = 'login'),
     path('sing_in', views.sing_in, name = 'sing_in'),
+    path('create_user', views.create_user_view, name='create_user'),
     path('logout', views.logout_view, name='logout'),
+    path('blog/likePost/<int:post_id>', views.likePost, name ='likePost'),
     
 ]

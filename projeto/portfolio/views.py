@@ -41,10 +41,11 @@ def blog(request):
     return render(request, 'blog.html', context)
 
 
+def likePost(request, post_id):
+    Post.objects.filter(pk = post_id).update(likes = Post.objects.get(pk = post_id).likes + 1)
+    return HttpResponseRedirect(reverse('blog'))
 
 
-
-@login_required
 def deletePost(request, post_id):
     Post.objects.get(pk = post_id).delete()
     return HttpResponseRedirect(reverse('blog'))
@@ -78,3 +79,15 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('home')
+
+
+
+
+def create_user_view(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        password = request.POST['password']
+
+    User.objects.create_user(name, email, password)
+    return render(request, 'index.html')

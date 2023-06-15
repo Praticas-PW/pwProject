@@ -32,15 +32,20 @@
         
         <div class="hdr" style="position: relative;">
             <p style="display: block"  >
+                {% if request.user.is_authenticated %}
+                <a href="{% url 'logout' %}" style="font-size: 25px;">
+                    Logout : {{request.user}}</a> 
+
+                </a>
+                {% else %}
                 <a href="{% url 'login' %}" style="font-size: 25px;">
-                    <i class="fa-sharp fa-regular fa-arrow-right-to-arc"></i>
                     login
                 </a>
                 <a href="{% url 'sing_in' %}" style="font-size: 25px;">
-                    <i class="fa-sharp fa-regular fa-arrow-right-to-arc"></i>
-                    sing in
+                    Sign up
                 </a>
-                <a href="{% url 'home' %}">
+                {% endif %}
+                <a href="{% url 'home' %}" style="font-size: 35px;">
                     Pedro Lopes
                 </a>
             </p>
@@ -55,16 +60,6 @@
                 <a>
                     <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
                 </a>
-                <a>
-                    <p >
-                        {% if request.user.is_authenticated %}
-                        user: {{request.user}}
-                        <a href="{% url 'logout' %}" style="font-size: 10px;">Logout</a>
-                        {% else %}
-                        <a href="{% url 'login' %}" style="font-size: 10px;">Login</a>
-                        {% endif %}
-                    </p>
-                </a>
             </nav>
         </div>
 
@@ -75,10 +70,6 @@
 
 
 
-        <div>
-
-
-        </div>
         
 
     </body>

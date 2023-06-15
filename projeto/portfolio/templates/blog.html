@@ -43,7 +43,20 @@
                 </p>
             </div>
             <br>
+            {% if request.user.is_authenticated %}
             <input class="hover-animation" type="submit" value="send">
+            
+            {% else %}
+            <a href="{% url 'login' %}" style="font-size: 20px;   color: black; text-decoration: none;">
+                login
+            </a>
+            <a>
+                /
+            </a>
+            <a href="{% url 'sing_in' %}" style="font-size: 20px;   color: black; text-decoration: none;">
+                sing up
+            </a>
+            {% endif %}
             <br>
         </form>
     </div>
@@ -72,13 +85,23 @@
         <br>
         <br>
         <p>{{post.text}}</p>
-        <a href="{% url 'deletePost' post.id %}" role="button" class="btn btn-danger">Apagar</a>
+        {% if user.is_superuser %}
+            <a href="{% url 'deletePost' post.id %}" role="button" class="btn btn-danger">Apagar</a>
+        {% endif %}
         <br>
         <br>
         <br>
-        <i class="fa-solid fa-heart"></i>
+        <div class="barrira-child">
+            <p>
+                {{post.likes}} 
+                <a href="{% url 'likePost' post.id%}" role="button" class="btn btn-danger">
+                    <i class="fa-solid fa-heart"></i>
+                </a>  
+            </p>
+        </div>
         {%endif%}
         {% endfor %}
+
     </div>
 </div>
 
@@ -98,10 +121,20 @@
         <br>
         <br>
         <p>{{post.text}}</p>
-        <a href="{% url 'deletePost' post.id %}" role="button" class="btn btn-danger">Apagar</a>
+        {% if user.is_superuser %}
+            <a href="{% url 'deletePost' post.id %}" role="button" class="btn btn-danger">Apagar</a>
+        {% endif %}
         <br>
         <br>
         <br>
+        <div class="barrira-child">
+            <p>
+                {{post.likes}} 
+                <a href="{% url 'likePost' post.id%}" role="button" class="btn btn-danger">
+                    <i class="fa-solid fa-heart"></i>
+                </a>  
+            </p>
+        </div>
         {%endif%}
         {% endfor %}
     </div>
@@ -122,10 +155,20 @@
         <br>
         <br>
         <p>{{post.text}}</p>
-        <a href="{% url 'deletePost' post.id %}" role="button" class="btn btn-danger">Apagar</a>
+        {% if user.is_superuser %}
+            <a href="{% url 'deletePost' post.id %}" role="button" class="btn btn-danger">Apagar</a>
+        {% endif %}
         <br>
         <br>
         <br>
+        <div class="barrira-child">
+            <p>
+                {{post.likes}} 
+                <a href="{% url 'likePost' post.id%}" role="button" class="btn btn-danger">
+                    <i class="fa-solid fa-heart"></i>
+                </a>  
+            </p>
+        </div>
         {%endif%}
         {% endfor %}
     </div>
@@ -148,11 +191,20 @@
         <br>
         <br>
         <p>{{post.text}}</p>
-        <a href="{% url 'deletePost' post.id %}" role="button" class="btn btn-danger">Apagar</a>
+        {% if user.is_superuser %}
+            <a href="{% url 'deletePost' post.id %}" role="button" class="btn btn-danger">Apagar</a>
+        {% endif %}
         <br>
         <br>
         <br>
-        
+        <div class="barrira-child">
+            <p>
+                {{post.likes}} 
+                <a href="{% url 'likePost' post.id%}" role="button" class="btn btn-danger">
+                    <i class="fa-solid fa-heart"></i>
+                </a>  
+            </p>
+        </div>
         {%endif%}
         {% endfor %}
     </div>
