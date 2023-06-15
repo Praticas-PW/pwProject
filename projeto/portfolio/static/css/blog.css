@@ -29,6 +29,10 @@ html{
 
 }
 
+.inputText_dark{
+    background-color: rgb(80, 78, 75);
+}
+
 
 
 .blogHeader{
@@ -46,6 +50,9 @@ html{
     padding: 2%;
 }
 
+.blogHeader_dark{
+    background-color:grey;
+}
 
 .barreira{
     width: 800px;
@@ -56,10 +63,9 @@ html{
 #id_text {
     width: 700px;
     height: 500px;
-
-      
-      
 }
+
+
 input#id_text{
     vertical-align: top;
     white-space: normal;

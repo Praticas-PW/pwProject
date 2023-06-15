@@ -5,7 +5,7 @@
 
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/blog.css' %}"> 
-<!-- <script src="{% static 'js/licenciatura.js' %}"></script> -->
+<script src="{% static 'js/blog.js' %}"></script>
 {% endblock head %}
 
 
@@ -78,42 +78,6 @@
         </h2>
         {% for post in posts %}
         <br>
-        {%if post.subject == 0%}
-        <h3>
-        <p>{{post.title}}</p>
-        </h3>
-        <br>
-        <br>
-        <p>{{post.text}}</p>
-        {% if user.is_superuser %}
-            <a href="{% url 'deletePost' post.id %}" role="button" class="btn btn-danger">Apagar</a>
-        {% endif %}
-        <br>
-        <br>
-        <br>
-        <div class="barrira-child">
-            <p>
-                {{post.likes}} 
-                <a href="{% url 'likePost' post.id%}" role="button" class="btn btn-danger">
-                    <i class="fa-solid fa-heart"></i>
-                </a>  
-            </p>
-        </div>
-        {%endif%}
-        {% endfor %}
-
-    </div>
-</div>
-
-
-<div class="inputText">
-    <div class="barreira">
-        <br>
-        <h2>
-            Educacao
-        </h2>
-        {% for post in posts %}
-        <br>
         {%if post.subject == 1%}
         <h3>
         <p>{{post.title}}</p>
@@ -137,6 +101,7 @@
         </div>
         {%endif%}
         {% endfor %}
+
     </div>
 </div>
 
@@ -148,7 +113,41 @@
         </h2>
         {% for post in posts %}
         <br>
-        {%if post.subject == 2 %}
+        {%if post.subject == 2%}
+        <h3>
+        <p>{{post.title}}</p>
+        </h3>
+        <br>
+        <br>
+        <p>{{post.text}}</p>
+        {% if user.is_superuser %}
+            <a href="{% url 'deletePost' post.id %}" role="button" class="btn btn-danger">Apagar</a>
+        {% endif %}
+        <br>
+        <br>
+        <br>
+        <div class="barrira-child">
+            <p>
+                {{post.likes}} 
+                <a href="{% url 'likePost' post.id%}" role="button" class="btn btn-danger">
+                    <i class="fa-solid fa-heart"></i>
+                </a>  
+            </p>
+        </div>
+        {%endif%}
+        {% endfor %}
+    </div>
+</div>
+
+
+<div class="inputText">
+    <div class="barreira">
+        <h2>
+            Cultura
+        </h2>
+        {% for post in posts %}
+        <br>
+        {%if post.subject == 3 %}
         <h3>
         <p>{{post.title}}</p>
         </h3>
@@ -180,11 +179,11 @@
     <div class="barreira">
 
         <h2>
-            Cultra
+            Educacao
         </h2>
         {% for post in posts %}
         <br>
-        {%if post.subject == 3 %}
+        {%if post.subject == 4 %}
         <h3>
         <p>{{post.title}}</p>
         </h3>

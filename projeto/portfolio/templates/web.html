@@ -5,6 +5,18 @@
 
 
 {% block header %}
-<a href="{% url 'licenciatura' %}">Licenciatura</a>
-<a href="{% url 'projetos' %}">Projetos</a>
+<div>
+    <link rel="stylesheet" href="{% static 'css/web.css' %}">
+    <a href="{% url 'licenciatura' %}">Licenciatura</a>
+    <a href="{% url 'projetos' %}">Projetos</a>
+</div>
 {% endblock header%}
+
+
+{% block main %}
+<div class="centered-div">
+    <a href="{% static 'labs/lab1_lab2-main/index.html'%}" class="flashy-link button">lab 1 / 2</a>
+    <a href="{% static 'labs/lab3-main/index.html'%}" class="flashy-link button">lab 3</a>
+    <a href="{% static 'labs/lab4-master/index.html'%}" class="flashy-link button">lab 4</a>
+</div>
+{% endblock main %}

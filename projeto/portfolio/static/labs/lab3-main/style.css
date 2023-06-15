@@ -1,0 +1,34 @@
+* {box-sizing: border-box; 
+    padding: 0; 
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.myDiv{
+    width: 100vw;
+    height: 50vh;   
+    background-color: lightblue;
+}
+
+.paragraph{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200px;
+}
+
+.phrase{
+    position:absolute;
+    top: 600px;
+    left: 300px;
+    color: blue;
+    font-size: 100px;
+}
+
+.transparent_div{
+    position:absolute;
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    background: transparent;
+}

@@ -10,11 +10,6 @@
   
 
 
-<div class="warning">
-  {% if not request.user.is_authenticated %}
-      {{ message }}
-  {% endif %}
-</div>
 
 
 <div class="centered-div" style="height: 60px;">
@@ -32,6 +27,7 @@
   </form>
   
 </div>
+
 
 
 {% endblock main %}
