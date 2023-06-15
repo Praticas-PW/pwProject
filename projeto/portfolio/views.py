@@ -26,6 +26,9 @@ def projetos(request):
 def editPost(request):
     return render(request, 'editPost.html')
 
+def sing_in(request):
+    return render(request, 'sing_in.html')
+
 
 def blog(request):
 
@@ -70,3 +73,8 @@ def login_view(request):
                 'message': 'Credenciais invalidas'
             })
     return render(request, 'login.html')
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('home')

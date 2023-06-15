@@ -11,6 +11,8 @@ urlpatterns = [
     path('blog', views.blog, name ='blog'),
     path('web', views.web, name='web'),
     path('blog/deletePost/ <int:post_id>', views.deletePost,name='deletePost'),
-    path('login', views.login_view, name = 'login')
+    path('login', views.login_view, name = 'login'),
+    path('sing_in', views.sing_in, name = 'sing_in'),
+    path('logout', views.logout_view, name='logout'),
     
 ]
